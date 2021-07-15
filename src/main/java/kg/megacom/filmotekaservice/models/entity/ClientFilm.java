@@ -3,7 +3,7 @@ package kg.megacom.filmotekaservice.models.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -14,8 +14,8 @@ public class ClientFilm {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private Date startDate;
-    private Date endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     @ManyToOne
     @JoinColumn(name = "client")

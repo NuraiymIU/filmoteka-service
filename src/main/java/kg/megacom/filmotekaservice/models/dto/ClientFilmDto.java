@@ -1,17 +1,22 @@
 package kg.megacom.filmotekaservice.models.dto;
 
-import kg.megacom.filmotekaservice.models.entity.Client;
-import kg.megacom.filmotekaservice.models.entity.Film;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 public class ClientFilmDto {
 
     private Long id;
-    private Date startDate;
-    private Date endDate;
-    private Client client;
-    private Film film;
+
+
+    @JsonFormat(pattern = "dd.MM.yyyy")
+    private LocalDate startDate;
+
+    @JsonFormat(pattern = "dd.MM.yyyy")
+    private LocalDate endDate;
+
+    private ClientDto client;
+    private FilmDto film;
 }
