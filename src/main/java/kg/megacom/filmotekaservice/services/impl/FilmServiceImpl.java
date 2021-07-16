@@ -24,7 +24,7 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     public FilmDto update(FilmDto filmDto) {
-        if (!filmRepo.existsById(filmDto.getId())){
+        if (!filmRepo.existsById(filmDto.getId())) {
             throw new NotFound("Фильм не найден!");
         }
         return FilmMapper.INSTANCE.toDto(filmRepo.save(FilmMapper.INSTANCE.toEntity(filmDto)));
@@ -39,7 +39,7 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     public FilmDto findById(Long id) {
-        Film film = filmRepo.findById(id).orElseThrow(()->new NotFound("Фильм не найден!"));
+        Film film = filmRepo.findById(id).orElseThrow(() -> new NotFound("Фильм не найден!"));
         return FilmMapper.INSTANCE.toDto(film);
     }
 }

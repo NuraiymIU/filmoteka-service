@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ClientService {
 
-    ClientDto order(ClientDto clientDto);
+    ClientDto save(ClientDto clientDto);
 
 }

@@ -14,8 +14,8 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
-    @PostMapping("/order")
-    public ClientDto order(@RequestBody ClientDto clientDto){
-        return clientService.order(clientDto);
+    @PostMapping("/save")
+    public ClientDto save(@RequestBody ClientDto clientDto) {
+        return clientService.save(clientDto);
     }
 }

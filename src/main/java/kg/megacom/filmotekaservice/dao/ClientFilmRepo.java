@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClientFilmRepo extends JpaRepository<ClientFilm,Long> {
+public interface ClientFilmRepo extends JpaRepository<ClientFilm, Long> {
 }

@@ -15,12 +15,12 @@ public class FilmController {
     private FilmService filmService;
 
     @PostMapping("/save")
-    public FilmDto save(@RequestBody FilmDto filmDto){
+    public FilmDto save(@RequestBody FilmDto filmDto) {
         return filmService.save(filmDto);
     }
 
     @PutMapping("/update")
-    public FilmDto update(@RequestBody FilmDto filmDto){
+    public FilmDto update(@RequestBody FilmDto filmDto) {
         return filmService.update(filmDto);
     }
 

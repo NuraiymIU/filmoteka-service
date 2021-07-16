@@ -37,14 +37,14 @@ public class ClientMapperImpl implements ClientMapper {
     @Override
     public List<ClientDto> toDtos(List<Client> t) {
         return t.stream()
-                .map(x-> toDto(x))
+                .map(x -> toDto(x))
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<Client> toEntities(List<ClientDto> clientDtos) {
         return clientDtos.stream()
-                .map(x-> toEntity(x))
+                .map(x -> toEntity(x))
                 .collect(Collectors.toList());
     }
 }

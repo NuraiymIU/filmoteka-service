@@ -8,8 +8,8 @@ import org.mapstruct.factory.Mappers;
 import java.util.List;
 
 @Mapper
-public interface FilmMapper  {
-    FilmMapper INSTANCE= Mappers.getMapper(FilmMapper.class);
+public interface FilmMapper {
+    FilmMapper INSTANCE = Mappers.getMapper(FilmMapper.class);
 
     Film toEntity(FilmDto filmDto);
 
