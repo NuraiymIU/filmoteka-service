@@ -6,7 +6,6 @@ import kg.megacom.filmotekaservice.models.dto.ClientDto;
 import kg.megacom.filmotekaservice.models.dto.ClientFilmDto;
 import kg.megacom.filmotekaservice.models.dto.FilmDto;
 import kg.megacom.filmotekaservice.models.dto.RequestDto;
-import kg.megacom.filmotekaservice.models.entity.ClientFilm;
 import kg.megacom.filmotekaservice.services.ClientFilmService;
 import kg.megacom.filmotekaservice.services.ClientService;
 import kg.megacom.filmotekaservice.services.FilmService;
@@ -40,6 +39,6 @@ public class ClientFilmServiceImpl implements ClientFilmService {
         clientFilmDto = ClientFimMapper.INSTANCE.toDto(clientFilmRepo.save(ClientFimMapper.INSTANCE.toEntity(clientFilmDto)));
         return clientFilmDto;
 
-
     }
+
 }
